@@ -2,6 +2,8 @@ package info.steven.testdrivendevelopment;
 
 import org.junit.Test;
 
+import java.util.Random;
+
 import static org.junit.Assert.*;
 
 /**
@@ -13,5 +15,14 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+    }
+
+    @Test
+    public void multiplication() {
+        Random random = new Random();
+        int x = random.nextInt(1000);
+        int y = random.nextInt(1000);
+
+        assertEquals(x*y, Util.multiply(x, y));
     }
 }
